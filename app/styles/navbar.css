@@ -222,9 +222,9 @@ img {
   }
 }
 .nav-logo-img {
-  width: 32px;
-  height: 32px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
-  border-radius: 6px;
+  border-radius: 50px;
   margin-right: 8px;
 }
