@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Upload, Zap } from "lucide-react";
-import "../styles/navbar.css"; // ajustá el path si es necesario
+import { Upload } from "lucide-react";
+import "../styles/navbar.css";
 
 const links = ["Inicio", "Explorar", "En vivo", "Ranking", "Comunidad"];
 
@@ -14,16 +14,20 @@ export default function Navbar() {
       <nav className="navbar">
         {/* Logo */}
         <div className="nav-logo">
-          <div className="nav-logo-icon">
-            <Zap size={20} color="white" fill="white" />
-          </div>
+          <img
+            src="/images/preview.png"
+            alt="TalentStream logo"
+            className="nav-logo-img"
+          />
           <span className="nav-brand">TalentStream</span>
         </div>
 
         {/* Links desktop */}
         <div className="nav-links">
           {links.map((l) => (
-            <button key={l} className="nav-link">{l}</button>
+            <button key={l} className="nav-link">
+              {l}
+            </button>
           ))}
         </div>
 
@@ -48,7 +52,7 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Menú desplegable mobile */}
+      {/* Menú mobile */}
       <div className={`nav-mobile-menu ${menuOpen ? "open" : ""}`}>
         {links.map((l) => (
           <button
